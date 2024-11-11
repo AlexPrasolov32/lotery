@@ -1,5 +1,5 @@
 <?php
-function generateRandomWord() 
+function generateRandomWord() : string
 {
     $alphabet = [
         'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 
@@ -15,7 +15,7 @@ function generateRandomWord()
     }
     return $word;
 }
-function easyLotery(string $inputWord)
+function easyLotery(string $inputWord) : string
 {
 	mb_regex_encoding('UTF-8');
 	mb_internal_encoding("UTF-8");
@@ -49,7 +49,9 @@ function easyLotery(string $inputWord)
 $originalWord = generateRandomWord();
 $codedWord = easyLotery($originalWord);
 $decodedWord = easyLotery($codedWord);
-var_dump($originalWord);
-var_dump($codedWord);
-var_dump($decodedWord);
+echo($originalWord);
+echo(' ');
+echo($codedWord);
+echo(' ');
+echo($decodedWord);
 ?>
